@@ -9,7 +9,7 @@ import type {
   SliceMeta,
 } from './types';
 
-const BASE = '';
+const BASE = (import.meta.env.VITE_API_URL ?? '').replace(/\/$/, '');
 
 async function json<T>(response: Response): Promise<T> {
   if (!response.ok) {
