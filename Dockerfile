@@ -11,6 +11,7 @@ FROM python:3.12-slim
 WORKDIR /app
 ENV PYTHONUNBUFFERED=1
 ENV DYNANADIO_HOME=/data/dynadio
+ENV DYNADIO_ROOT=/app
 
 COPY pyproject.toml ./
 COPY core ./core

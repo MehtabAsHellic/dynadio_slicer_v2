@@ -57,6 +57,9 @@ def default_workspace() -> Path:
 
 
 def project_root() -> Path:
+    configured_root = os.environ.get("DYNADIO_ROOT")
+    if configured_root:
+        return Path(configured_root)
     return Path(__file__).resolve().parents[2]
 
 
